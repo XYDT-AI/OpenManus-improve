@@ -31,7 +31,7 @@ async def run_flow():
             start_time = time.time()
             result = await asyncio.wait_for(
                 flow.execute(prompt),
-                timeout=3600,  # 60 minute timeout for the entire execution
+                timeout=3600,  # 1 hour timeout for the entire execution
             )
             elapsed_time = time.time() - start_time
             logger.info(f"Request processed in {elapsed_time:.2f} seconds")
